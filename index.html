@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" id="htmlRoot">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="pageTitle">پیام انجیل | زندگی عیسی مسیح</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ناوبری -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" aria-label="پیام انجیل">
+        <svg class="logo-svg" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="2" y="7" width="20" height="27" rx="3" fill="#1a2744" stroke="#c9a84c" stroke-width="1.5"/>
+          <rect x="2" y="7" width="5" height="27" rx="2" fill="#c9a84c" opacity="0.75"/>
+          <line x1="10" y1="15" x2="19" y2="15" stroke="#e8cc80" stroke-width="1.2" stroke-linecap="round" opacity="0.65"/>
+          <line x1="10" y1="19" x2="19" y2="19" stroke="#e8cc80" stroke-width="1.2" stroke-linecap="round" opacity="0.65"/>
+          <line x1="10" y1="23" x2="16" y2="23" stroke="#e8cc80" stroke-width="1.2" stroke-linecap="round" opacity="0.65"/>
+          <line x1="28" y1="3" x2="28" y2="23" stroke="#c9a84c" stroke-width="3" stroke-linecap="round"/>
+          <line x1="22" y1="10" x2="34" y2="10" stroke="#c9a84c" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="28" cy="10" r="6" fill="#c9a84c" opacity="0.1"/>
+        </svg>
+        <span class="logo-text" data-i18n="logoText">پیام انجیل</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#bible"       data-i18n="nav.bible">کتاب مقدس</a></li>
+        <li><a href="#timeline"    data-i18n="nav.timeline">زندگی مسیح</a></li>
+        <li><a href="#verse-of-day" data-i18n="nav.verse">آیه‌ی امروز</a></li>
+        <li><a href="#countdown"   data-i18n="nav.countdown">شمارش معکوس</a></li>
+        <li><a href="#symbols"     data-i18n="nav.symbols">نمادها</a></li>
+        <li><a href="#about"       data-i18n="nav.about">درباره</a></li>
+        <li><a href="#contact"     data-i18n="nav.contact">تماس</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- دکمه حالت شب -->
+        <button class="dark-toggle" id="darkToggle" aria-label="حالت شب">
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <!-- دکمه تغییر زبان -->
+        <button class="lang-toggle" id="langToggle" aria-label="Switch to English">
+          <span class="lang-fa">FA</span>
+          <span class="lang-sep">|</span>
+          <span class="lang-en">EN</span>
+        </button>
+        <!-- همبرگر موبایل -->
+        <button class="nav-toggle" id="navToggle" aria-label="منو" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-particles" id="heroParticles"></div>
+    <div class="hero-content fade-in">
+      <div class="hero-symbol">✝</div>
+      <h1 class="hero-title" data-i18n="hero.title">«من راه و حقیقت و حیات هستم»</h1>
+      <p class="hero-subtitle" data-i18n="hero.subtitle">یوحنا ۱۴:۶ — عیسی مسیح</p>
+      <p class="hero-desc" data-i18n="hero.desc">با زندگی، پیام و دعوت عیسی مسیح آشنا شوید؛ خبری که دو هزار سال است جهان را دگرگون می‌کند.</p>
+      <a href="#bible" class="btn-primary" data-i18n="hero.cta">بیشتر بدانید ↓</a>
+    </div>
+    <div class="hero-scroll-hint">▼</div>
+  </section>
+
+  <!-- کتاب مقدس -->
+  <section class="section" id="bible">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag" data-i18n="bible.tag">معرفی</span>
+        <h2 data-i18n="bible.title">کتاب مقدس چیست؟</h2>
+        <p class="section-intro" data-i18n="bible.intro">کتاب مقدس، مجموعه‌ای از نوشته‌های مقدس است که در طول قرن‌ها توسط انبیا و رسولان نوشته شده و پیام خدا به انسان را در بر می‌گیرد.</p>
+      </div>
+      <div class="bible-cards fade-in">
+        <div class="bible-card">
+          <div class="bible-icon">📜</div>
+          <h3 data-i18n="bible.ot.title">عهد عتیق</h3>
+          <p data-i18n="bible.ot.desc">نوشته‌های مقدس یهودی پیش از تولد مسیح؛ شامل تاریخ قوم اسرائیل، شریعت الهی، مزامیر داوود و پیشگویی‌های انبیا درباره‌ی آمدن مسیحا — نجات‌دهنده‌ای که خدا وعده‌اش را داده بود.</p>
+        </div>
+        <div class="bible-card highlighted">
+          <div class="bible-icon">✨</div>
+          <h3 data-i18n="bible.nt.title">عهد جدید</h3>
+          <p data-i18n="bible.nt.desc">شامل چهار انجیل (متی، مرقس، لوقا، یوحنا)، اعمال رسولان، نامه‌های رسولان و کتاب مکاشفه. واژه‌ی «انجیل» به معنای «مژده» است — خبر خوش نجات از طریق عیسی مسیح.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- تایم‌لاین -->
+  <section class="section section-light" id="timeline">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag" data-i18n="timeline.tag">زندگی‌نامه</span>
+        <h2 data-i18n="timeline.title">عیسی مسیح — از تولد تا رستاخیز</h2>
+        <p class="section-intro" data-i18n="timeline.intro">سفری شگفت‌انگیز از آغوش باکره‌ای در بیت‌لحم تا قبری خالی در اورشلیم.</p>
+      </div>
+      <div class="timeline fade-in">
+        <div class="timeline-item">
+          <div class="timeline-icon">🕊️</div>
+          <div class="timeline-content">
+            <h3 data-i18n="tl.birth.title">تولد معجزه‌آسا</h3>
+            <span class="timeline-label" data-i18n="tl.birth.label">بیت‌لحم</span>
+            <p data-i18n="tl.birth.desc">عیسی از مریم باکره و از طریق روح‌القدس در بیت‌لحم به دنیا آمد. فرشته‌ای به مریم و یوسف مژده داد که این کودک «پسر خدا» و نجات‌دهنده‌ی جهان خواهد بود. چوپانان و مغان شرق برای پرستش او آمدند.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon">📖</div>
+          <div class="timeline-content">
+            <h3 data-i18n="tl.child.title">کودکی و ناصره</h3>
+            <span class="timeline-label" data-i18n="tl.child.label">ناصره</span>
+            <p data-i18n="tl.child.desc">پس از فرار به مصر برای در امان ماندن از هیرودیس، خانواده به ناصره بازگشتند. عیسی در خانه‌ای معمولی، پسر یک نجار، بزرگ شد. در دوازده‌سالگی در معبد اورشلیم با دانشمندان دین گفتگو کرد.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon">💧</div>
+          <div class="timeline-content">
+            <h3 data-i18n="tl.baptism.title">تعمید و آغاز خدمت</h3>
+            <span class="timeline-label" data-i18n="tl.baptism.label">رود اردن | ~۳۰ سالگی</span>
+            <p data-i18n="tl.baptism.desc">یحیای تعمیددهنده او را در رود اردن تعمید داد. روح‌القدس به شکل کبوتر فرود آمد و صدایی از آسمان گفت: «این است پسر محبوب من.» چهل روز روزه در بیابان دوره‌ی آمادگی او بود.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon">🌾</div>
+          <div class="timeline-content">
+            <h3 data-i18n="tl.ministry.title">سه سال خدمت و تعلیم</h3>
+            <span class="timeline-label" data-i18n="tl.ministry.label">جلیل و یهودیه</span>
+            <p data-i18n="tl.ministry.desc">دوازده حواری را انتخاب کرد و در سرتاسر منطقه تعلیم داد. موعظه‌ی سر کوه، مَثَل‌های به‌یادماندنی، و دو حکم اصلی: محبت به خدا و محبت به همسایه — پایه‌های تعلیم او بودند.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon">✨</div>
+          <div class="timeline-content">
+            <h3 data-i18n="tl.miracles.title">معجزات و شفاها</h3>
+            <span class="timeline-label" data-i18n="tl.miracles.label">سرتاسر فلسطین</span>
+            <p data-i18n="tl.miracles.desc">نابینایان بینا شدند، جذامیان پاک گشتند، مردگان زنده شدند. طوفان دریا را آرام کرد، روی آب راه رفت، و با چند نان و ماهی هزاران نفر را سیر کرد.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon">🍞</div>
+          <div class="timeline-content">
+            <h3 data-i18n="tl.supper.title">شام آخر و تسلیم شدن</h3>
+            <span class="timeline-label" data-i18n="tl.supper.label">اورشلیم</span>
+            <p data-i18n="tl.supper.desc">در شام آخر نان و شراب را نماد بدن و خون خود قرار داد — آغاز آیین «عشای ربانی». یهودا او را به رهبران دینی تسلیم کرد و محاکمه‌ای ناعادلانه در پی آمد.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon">✝️</div>
+          <div class="timeline-content">
+            <h3 data-i18n="tl.cross.title">مصلوب شدن — کفاره</h3>
+            <span class="timeline-label" data-i18n="tl.cross.label">جلجتا | اورشلیم</span>
+            <p data-i18n="tl.cross.desc">رومیان او را بر صلیب مصلوب کردند. مرگ او کفاره‌ی گناهان بشریت بود — او مجازاتی را که انسان‌ها سزاوارش بودند، به جای آن‌ها پذیرفت.</p>
+          </div>
+        </div>
+        <div class="timeline-item golden">
+          <div class="timeline-icon">☀️</div>
+          <div class="timeline-content">
+            <h3 data-i18n="tl.resurrection.title">رستاخیز — پیروزی بر مرگ</h3>
+            <span class="timeline-label" data-i18n="tl.resurrection.label">سه روز بعد</span>
+            <p data-i18n="tl.resurrection.desc">قبر خالی بود. عیسی از مردگان برخاست و چهل روز بارها بر شاگردانش ظاهر شد. رستاخیز هسته‌ی مرکزی ایمان مسیحی است — نشانه‌ی پیروزی بر مرگ.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- آیه روز -->
+  <section class="section section-verse" id="verse-of-day">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag" data-i18n="verse.tag">سخن مسیح</span>
+        <h2 data-i18n="verse.title">آیه‌ی امروز</h2>
+        <p class="section-intro" data-i18n="verse.intro">کلامی از عیسی مسیح برای امروز شما</p>
+      </div>
+      <div class="verse-carousel fade-in" role="region">
+        <div class="verse-card-wrap">
+          <div class="verse-card" id="verseCard">
+            <div class="verse-ornament top-ornament">✦</div>
+            <div class="verse-body">
+              <div class="verse-quote-mark">"</div>
+              <p class="verse-text" id="verseText"></p>
+              <div class="verse-quote-mark close-quote">"</div>
+            </div>
+            <div class="verse-ref-row">
+              <span class="verse-ref" id="verseRef"></span>
+              <div class="verse-actions">
+                <button class="verse-btn-copy" id="verseCopy" aria-label="کپی">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                  <span data-i18n="verse.copy">کپی</span>
+                </button>
+                <button class="verse-btn-share verse-btn-tg" id="shareVerseT" aria-label="تلگرام">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248-2.04 9.613c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.903.608z"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="verse-ornament bottom-ornament">✦</div>
+            <div class="verse-copy-toast" id="verseCopyToast" aria-live="polite" data-i18n="verse.copied">آیه کپی شد ✓</div>
+          </div>
+        </div>
+        <div class="verse-nav">
+          <button class="verse-arrow" id="versePrev" aria-label="قبلی">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+          <div class="verse-dots" id="verseDots" role="tablist"></div>
+          <button class="verse-arrow" id="verseNext" aria-label="بعدی">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+        </div>
+        <div class="verse-progress-wrap"><div class="verse-progress-bar" id="verseProgress"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- شمارش معکوس -->
+  <section class="section section-countdown" id="countdown">
+    <div class="countdown-bg-glow"></div>
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag light-tag" data-i18n="cd.tag">تقویم مسیحی</span>
+        <h2 class="light-heading" data-i18n="cd.title">شمارش معکوس تا عید</h2>
+        <p class="section-intro light-text" data-i18n="cd.intro">برای دیدن تایمر هر عید، روی نام آن کلیک کنید</p>
+      </div>
+      <div class="countdown-wrap fade-in">
+        <!-- تب‌های انتخاب عید -->
+        <div class="cd-event-tabs" id="cdEventTabs" role="tablist" aria-label="انتخاب عید"></div>
+        <!-- نمایش تایمر -->
+        <div class="countdown-blocks">
+          <div class="countdown-block"><span class="cd-num" id="cdDays">--</span><span class="cd-label" data-i18n="cd.days">روز</span></div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-block"><span class="cd-num" id="cdHours">--</span><span class="cd-label" data-i18n="cd.hours">ساعت</span></div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-block"><span class="cd-num" id="cdMins">--</span><span class="cd-label" data-i18n="cd.mins">دقیقه</span></div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-block"><span class="cd-num" id="cdSecs">--</span><span class="cd-label" data-i18n="cd.secs">ثانیه</span></div>
+        </div>
+        <p class="countdown-date-label" id="countdownDateLabel"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- نمادهای مسیحی -->
+  <section class="section" id="symbols">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag" data-i18n="sym.tag">نمادشناسی</span>
+        <h2 data-i18n="sym.title">نمادهای مسیحی</h2>
+        <p class="section-intro" data-i18n="sym.intro">هر نماد داستانی دارد — نشانه‌هایی که دو هزار سال است پیام ایمان را منتقل می‌کنند.</p>
+      </div>
+      <div class="symbols-grid fade-in">
+        <div class="symbol-card" tabindex="0">
+          <div class="symbol-front"><div class="symbol-glyph">✝</div><h3 data-i18n="sym.cross.t">صلیب</h3><span class="symbol-hint" data-i18n="sym.hint">کلیک کنید</span></div>
+          <div class="symbol-back"><h3 data-i18n="sym.cross.t">صلیب</h3><p data-i18n="sym.cross.d">مهم‌ترین نماد مسیحیت؛ نشانه‌ی مرگ فداکارانه‌ی عیسی و پیروزی محبت بر گناه و مرگ.</p></div>
+        </div>
+        <div class="symbol-card" tabindex="0">
+          <div class="symbol-front"><div class="symbol-glyph">🐟</div><h3 data-i18n="sym.fish.t">ماهی (ایکتوس)</h3><span class="symbol-hint" data-i18n="sym.hint">کلیک کنید</span></div>
+          <div class="symbol-back"><h3 data-i18n="sym.fish.t">ماهی (ایکتوس)</h3><p data-i18n="sym.fish.d">مسیحیان اولیه با این نماد یکدیگر را می‌شناختند. حروف یونانی آن مخفف «عیسی مسیح، پسر خدا، نجات‌دهنده» است.</p></div>
+        </div>
+        <div class="symbol-card" tabindex="0">
+          <div class="symbol-front"><div class="symbol-glyph">🕊️</div><h3 data-i18n="sym.dove.t">کبوتر</h3><span class="symbol-hint" data-i18n="sym.hint">کلیک کنید</span></div>
+          <div class="symbol-back"><h3 data-i18n="sym.dove.t">کبوتر</h3><p data-i18n="sym.dove.d">نماد روح‌القدس که در تعمید مسیح نازل شد؛ همچنین نماد آرامش، امید و آشتی با خدا.</p></div>
+        </div>
+        <div class="symbol-card" tabindex="0">
+          <div class="symbol-front"><div class="symbol-glyph">🕯️</div><h3 data-i18n="sym.candle.t">شمع</h3><span class="symbol-hint" data-i18n="sym.hint">کلیک کنید</span></div>
+          <div class="symbol-back"><h3 data-i18n="sym.candle.t">شمع</h3><p data-i18n="sym.candle.d">نشانه‌ی مسیح که «نور جهان» خواند. نور شمع در تاریکی، تصویری از امید و حضور خدا در سختی‌هاست.</p></div>
+        </div>
+        <div class="symbol-card" tabindex="0">
+          <div class="symbol-front"><div class="symbol-glyph">🍞</div><h3 data-i18n="sym.bread.t">نان و شراب</h3><span class="symbol-hint" data-i18n="sym.hint">کلیک کنید</span></div>
+          <div class="symbol-back"><h3 data-i18n="sym.bread.t">نان و شراب</h3><p data-i18n="sym.bread.d">نمادهای عشای ربانی؛ مسیح در شام آخر آن‌ها را نماد بدن و خون خود قرار داد.</p></div>
+        </div>
+        <div class="symbol-card" tabindex="0">
+          <div class="symbol-front"><div class="symbol-glyph">💧</div><h3 data-i18n="sym.water.t">آب</h3><span class="symbol-hint" data-i18n="sym.hint">کلیک کنید</span></div>
+          <div class="symbol-back"><h3 data-i18n="sym.water.t">آب</h3><p data-i18n="sym.water.d">نماد تعمید — آغاز زندگی نو در ایمان. غرق شدن نشانه‌ی مرگ به گناه، و بیرون آمدن نشانه‌ی تولد دوباره است.</p></div>
+        </div>
+        <div class="symbol-card" tabindex="0">
+          <div class="symbol-front"><div class="symbol-glyph">⭐</div><h3 data-i18n="sym.star.t">ستاره‌ی بیت‌لحم</h3><span class="symbol-hint" data-i18n="sym.hint">کلیک کنید</span></div>
+          <div class="symbol-back"><h3 data-i18n="sym.star.t">ستاره‌ی بیت‌لحم</h3><p data-i18n="sym.star.d">ستاره‌ای که مغان شرق را راهنمایی کرد؛ نماد هدایت الهی و آمدن نور به جهان.</p></div>
+        </div>
+        <div class="symbol-card" tabindex="0">
+          <div class="symbol-front"><div class="symbol-glyph">🌴</div><h3 data-i18n="sym.palm.t">برگ نخل</h3><span class="symbol-hint" data-i18n="sym.hint">کلیک کنید</span></div>
+          <div class="symbol-back"><h3 data-i18n="sym.palm.t">برگ نخل</h3><p data-i18n="sym.palm.d">یادآور ورود عیسی به اورشلیم؛ مردم برگ نخل به نشانه‌ی استقبال از پادشاه می‌افشاندند.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- درباره ما -->
+  <section class="section section-about" id="about">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag" data-i18n="about.tag">درباره‌ی ما</span>
+        <h2 data-i18n="about.title">با ما آشنا شوید</h2>
+        <p class="section-intro" data-i18n="about.intro">ما یک تیم کوچک از ایمانداران فارسی‌زبان هستیم که می‌خواهیم پیام محبت مسیح را با همه به اشتراک بگذاریم.</p>
+      </div>
+      <div class="about-wrap fade-in">
+        <div class="about-card">
+          <div class="about-avatar">
+            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" aria-hidden="true">
+              <circle cx="30" cy="30" r="30" fill="url(#avatarGrad)"/>
+              <defs><linearGradient id="avatarGrad" x1="0" y1="0" x2="60" y2="60"><stop offset="0%" stop-color="#1a2744"/><stop offset="100%" stop-color="#4a3070"/></linearGradient></defs>
+              <text x="30" y="38" text-anchor="middle" font-size="26" fill="#c9a84c">✝</text>
+            </svg>
+          </div>
+          <div class="about-info">
+            <h3 data-i18n="about.name">حسین</h3>
+            <p class="about-role" data-i18n="about.role">مدیر کانال | مبلّغ انجیل</p>
+            <p class="about-bio" data-i18n="about.bio">در تلاشم تا پیام محبت و امید مسیح را از طریق کانال تلگرام به فارسی‌زبانان سراسر جهان برسانم. هر سؤالی دارید، خوشحال می‌شوم پاسخ بدم.</p>
+            <div class="about-links">
+              <a href="https://t.me/payamenjil" target="_blank" rel="noopener noreferrer" class="about-social-btn about-tg" aria-label="کانال تلگرام پیام انجیل">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248-2.04 9.613c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.903.608z"/></svg>
+                <span data-i18n="about.tgChannel">کانال تلگرام پیام انجیل</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="about-mission">
+          <div class="mission-item">
+            <span class="mission-icon">📖</span>
+            <div>
+              <h4 data-i18n="about.m1.t">تعلیم کتاب مقدس</h4>
+              <p data-i18n="about.m1.d">محتوای آموزشی درباره‌ی انجیل و تعالیم مسیح به زبان ساده</p>
+            </div>
+          </div>
+          <div class="mission-item">
+            <span class="mission-icon">🙏</span>
+            <div>
+              <h4 data-i18n="about.m2.t">دعا و پشتیبانی</h4>
+              <p data-i18n="about.m2.d">همراهی در مسیر ایمان و پاسخ به سؤالات روحانی</p>
+            </div>
+          </div>
+          <div class="mission-item">
+            <span class="mission-icon">🌍</span>
+            <div>
+              <h4 data-i18n="about.m3.t">رسیدن به همه</h4>
+              <p data-i18n="about.m3.d">پیام مسیح برای همه‌ی فارسی‌زبانان، بدون استثنا</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- تماس -->
+  <section class="section section-cta" id="contact">
+    <div class="container">
+      <div class="cta-box fade-in">
+        <div class="cta-icon">✝</div>
+        <h2 data-i18n="contact.title">می‌خواهید بیشتر بدانید؟</h2>
+        <p data-i18n="contact.desc">اگر پرسشی دارید، می‌خواهید کتاب مقدس بخوانید، یا فقط کنجکاوید — با ما در تماس باشید.</p>
+        <form class="cta-form" id="contactForm" novalidate>
+          <div class="form-row">
+            <input type="text" id="userName" data-i18n-ph="contact.name" placeholder="نام شما" required aria-label="نام" />
+            <input type="email" id="userEmail" data-i18n-ph="contact.email" placeholder="ایمیل شما" required aria-label="ایمیل" />
+          </div>
+          <textarea id="userMsg" data-i18n-ph="contact.msg" placeholder="پیام یا سؤال شما..." rows="4" aria-label="پیام"></textarea>
+          <button type="submit" class="btn-primary" data-i18n="contact.send">ارسال پیام ✉</button>
+          <p class="form-success" id="formSuccess" aria-live="polite" data-i18n="contact.success">پیام شما با موفقیت ارسال شد!</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- فوتر -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-verse">
+        <p data-i18n="footer.verse">«زیرا خدا جهان را آن‌قدر محبت نمود که پسر یگانه‌ی خود را داد تا هر که به او ایمان آورد، هلاک نگردد بلکه حیات جاودانی یابد.»</p>
+        <span data-i18n="footer.verseRef">یوحنا ۳:۱۶</span>
+      </div>
+      <div class="footer-links">
+        <a href="#home" data-i18n="nav.home">خانه</a>
+        <a href="#bible" data-i18n="nav.bible">کتاب مقدس</a>
+        <a href="#timeline" data-i18n="nav.timeline">زندگی مسیح</a>
+        <a href="#about" data-i18n="nav.about">درباره</a>
+        <a href="#contact" data-i18n="nav.contact">تماس</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://t.me/payamenjil" target="_blank" rel="noopener noreferrer" aria-label="تلگرام">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248-2.04 9.613c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.903.608z"/></svg>
+        </a>
+      </div>
+      <p class="footer-copy" data-i18n="footer.copy">© ۲۰۲۵ — پیام انجیل | با محبت برای همه</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="برگشت به بالا">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <nav class="bottom-nav" id="bottomNav" aria-label="ناوبری موبایل">
+    <a href="#home" class="bn-item" aria-label="خانه">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><polyline points="9 21 9 12 15 12 15 21"/></svg>
+      <span data-i18n="nav.home">خانه</span>
+    </a>
+    <a href="#verse-of-day" class="bn-item" aria-label="آیه">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+      <span data-i18n="nav.verse">آیه</span>
+    </a>
+    <a href="#countdown" class="bn-item" aria-label="تایمر">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <span data-i18n="nav.countdown">تایمر</span>
+    </a>
+    <a href="#about" class="bn-item" aria-label="درباره">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <span data-i18n="nav.about">درباره</span>
+    </a>
+    <a href="#contact" class="bn-item" aria-label="تماس">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      <span data-i18n="nav.contact">تماس</span>
+    </a>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>
